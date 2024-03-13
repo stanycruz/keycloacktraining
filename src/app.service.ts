@@ -3,6 +3,10 @@ import { Injectable } from '@nestjs/common';
 @Injectable()
 export class AppService {
   getHello(): string {
-    return 'Hello World!';
+    return 'Hadouken!';
+  }
+
+  getProtectedResource(): string {
+    return 'This is a protected resource.';
   }
 }
