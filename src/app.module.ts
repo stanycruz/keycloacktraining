@@ -4,10 +4,12 @@ import { AuthGuard } from './auth/auth.guard';
 import { AppController } from './app.controller';
 import { KeycloakStrategy } from './auth/keycloak.strategy';
 import { AppService } from './app.service';
+import { AuthController } from './auth/auth.controller';
+import { AuthModule } from './auth/auth.module';
 
 @Module({
-  imports: [],
-  controllers: [AppController],
+  imports: [AuthModule],
+  controllers: [AppController, AuthController],
   providers: [
     {
       provide: APP_GUARD,
